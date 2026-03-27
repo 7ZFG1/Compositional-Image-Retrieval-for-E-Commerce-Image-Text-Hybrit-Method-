@@ -1,0 +1,30 @@
+ROOT_DIR: "DATASET/fashionIQ_dataset"
+CATEGORIES: ["dress", "shirt", "toptee"]
+SPLIT: "train"
+
+# Model 
+DEVICE: "cpu" 
+CLIP_BACKBONE: "ViT-B/32"
+EMBED_DIM: 512
+
+# Training Hyperparameters
+BATCH_SIZE: 128 
+EPOCHS: 10
+LR: 2e-4
+MARGIN: 0.2
+EVAL: True
+EVAL_STEP: 2  # Epoch
+
+# Output Paths
+FEATURE_CACHE: "embedded_dataset/image_features_fashionIQ.pt"
+MODEL_SAVE_DIR: "trained_models/v0.0.1"
+MODEL_SAVE_NAME: "fashion_combiner_best.pth"
+
+
+#################### Inference Settings
+MODEL_WEIGHTS: "trained_models/fashion_combiner_best.pth" 
+
+# Vektör DB Ayarları
+VECTOR_DB: "faiss"    # "faiss" or "milvus"
+METRIC: "cosine"      # "cosine" or "l2"
+TOP_K: 5              # Retrieve top K results from the vector database
