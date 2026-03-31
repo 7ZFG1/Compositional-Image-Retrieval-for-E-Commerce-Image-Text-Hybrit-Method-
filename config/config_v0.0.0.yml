@@ -3,26 +3,28 @@ CATEGORIES: ["dress", "shirt", "toptee"]
 SPLIT: "train"
 
 # Model 
-DEVICE: "cpu" 
+DEVICE: "cuda" 
 CLIP_BACKBONE: "ViT-B/32"
 EMBED_DIM: 512
 
 # Training Hyperparameters
 BATCH_SIZE: 128 
-EPOCHS: 10
+EPOCHS: 25
 LR: 2e-4
 MARGIN: 0.2
 EVAL: True
-EVAL_STEP: 2  # Epoch
+EVAL_STEP: 1  # Epoch
+
+LOSS_TYPE: "infonce"  # "infonce" or "triplet" or "msloss"
 
 # Output Paths
 FEATURE_CACHE: "embedded_dataset/image_features_fashionIQ.pt"
-MODEL_SAVE_DIR: "trained_models/v0.0.1"
+MODEL_SAVE_DIR: "trained_models/v1.2.0"
 MODEL_SAVE_NAME: "fashion_combiner_best.pth"
 
 
 #################### Inference Settings
-MODEL_WEIGHTS: "trained_models/fashion_combiner_best.pth" 
+MODEL_WEIGHTS: "trained_models/v1.1.0/fashion_combiner_best.pth" 
 
 # Vektör DB Ayarları
 VECTOR_DB: "faiss"    # "faiss" or "milvus"
