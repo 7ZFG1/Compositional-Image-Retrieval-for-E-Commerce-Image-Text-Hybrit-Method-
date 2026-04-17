@@ -83,9 +83,9 @@ python demo_interface.py
 
 | Category | Zero-Shot CLIP (R@10) | Residual Combiner (R@10) |
 | :--- | :---: | :---: |
-| **Dress** | ~12.0% | **TBA** |
-| **Shirt** | ~10.5% | **TBA** |
-| **Toptee** | ~11.8% | **TBA** |
+| **Dress** | ~12.0% | ~17.15% |
+| **Shirt** | ~10.5% | ~16.65% |
+| **Toptee** | ~11.8% | ~19.5% |
 
 > *Note: Zero-Shot CLIP baselines represent the standard mathematical addition of normalized image and text features without a trained combiner module, as cited in CIR literature.*
 
