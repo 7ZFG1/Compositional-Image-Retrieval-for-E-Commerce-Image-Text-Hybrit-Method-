@@ -5,10 +5,14 @@
 [![Milvus](https://img.shields.io/badge/Milvus-Lite-0D6EFD.svg)](https://milvus.io/)
 [![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-blueviolet.svg)](https://github.com/facebookresearch/faiss)
 
+
+
 ## 📖 Overview
 This project tackles the "Compositional Image Retrieval" (CIR) problem in e-commerce. Traditional search engines rely strictly on either text or images. This system bridges the gap by allowing users to query using a **Reference Image + Relative Text Modification** (e.g., providing a picture of a dress and typing *"is shorter and has floral patterns"*).
 
 Designed with hardware efficiency in mind, the pipeline successfully trains and evaluates on the **Fashion-IQ** dataset using constrained hardware (e.g., 4GB VRAM GPUs) without sacrificing production-level scalability.
+
+>ONLINE DEMO: [DEMO on Huggingface](https://huggingface.co/spaces/zekifurkan/fashion-image-retrieval)
 
 <img width="1526" height="664" alt="Screenshot from 2026-03-27 15-38-56" src="https://github.com/user-attachments/assets/2e18ef0d-fd65-4ec2-a8b5-2c0017f7a4d4" />
 
